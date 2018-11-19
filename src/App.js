@@ -21,8 +21,7 @@ export default class App extends Component {
       .then(response => response.json())
       .then(data => {
         const forecast = data.list;
-        console.log(forecast);
-        this.setState({ weather: forecast })
+        this.setState({ weather: forecast });
       });
   }
 
