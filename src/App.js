@@ -17,12 +17,22 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch(api)
-      .then(response => response.json())
-      .then(data => {
-        const forecast = data.list;
-        this.setState({ weather: forecast });
-      });
+    // fetch(api)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     const forecast = data.list;
+    //     this.setState({ weather: forecast });
+    //   });
+
+    async function fetchData(url) {
+      const res = await fetch(url);
+      const data = await res.json();
+      return data;
+    };
+
+    fetchData(api).then( data => {
+      this.setState({weather: data.list});
+    });
   }
 
   render() {

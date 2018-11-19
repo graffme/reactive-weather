@@ -15,27 +15,27 @@ export default function WeatherTile({forecast}) {
         <p className="weather-date">{weekdays[day+index] + " " + (date+index) + " " + months[month]}</p>
 
         {dailyForecast.weather[0].id >= 200 && dailyForecast.weather[0].id < 300 ?
-          <i class="wi-storm-showers"></i>
+          <i className="wi-storm-showers"></i>
         : null}
 
         {dailyForecast.weather[0].id >= 300 && dailyForecast.weather[0].id < 600 ?
-          <i class="wi wi-rain"></i>
+          <i className="wi wi-rain"></i>
         : null}
 
         {dailyForecast.weather[0].id >= 600 && dailyForecast.weather[0].id < 700 ?
-          <i class="wi wi-snow"></i>
+          <i className="wi wi-snow"></i>
         : null}
 
         {dailyForecast.weather[0].id >= 700 && dailyForecast.weather[0].id < 800 ?
-          <i class="wi wi-fog"></i>
+          <i className="wi wi-fog"></i>
         : null}
 
-        {dailyForecast.weather[0].id == 800 ?
-          <i class="wi wi-day-sunny"></i>
+        {dailyForecast.weather[0].id === 800 ?
+          <i className="wi wi-day-sunny"></i>
         : null}
 
         {dailyForecast.weather[0].id > 800 ?
-          <i class="wi wi-cloud"></i>
+          <i className="wi wi-cloud"></i>
         : null}
 
         <p className="temp">{(dailyForecast.temp.day).toFixed(0)} °C</p>
