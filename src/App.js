@@ -3,7 +3,7 @@ import './App.scss';
 
 import WeatherTile from './components/WeatherTile/WeatherTile.js';
 
-const API_KEY = "abe5affb6861893994d8ed784c41108d";
+const API_KEY = "get your FREE api key on OpenWeatherMap";
 const api = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=52.4&lon=16.9&units=metric&cnt=5&appid=" + API_KEY;
 //[52.4083, 16.9335]
 
