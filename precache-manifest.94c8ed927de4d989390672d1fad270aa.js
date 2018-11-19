@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/reactive-weather/static/media/weathericons-regular-webfont.1cd48d78.woff2"
   },
   {
-    "revision": "4343fc4771ad695c213c",
+    "revision": "627fc854cc5c41e0a5ab",
     "url": "/reactive-weather/static/css/main.be422516.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/reactive-weather/static/js/runtime~main.8b6d6f91.js"
   },
   {
-    "revision": "4343fc4771ad695c213c",
-    "url": "/reactive-weather/static/js/main.4343fc47.chunk.js"
+    "revision": "627fc854cc5c41e0a5ab",
+    "url": "/reactive-weather/static/js/main.627fc854.chunk.js"
   },
   {
     "revision": "8cac70ebda3f23ce472110d9f21e8593",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/reactive-weather/static/css/1.c363a328.chunk.css"
   },
   {
-    "revision": "103bd711964893e2311feff07e9b0565",
+    "revision": "a48c3e84cb4d4685a1a594f59e262bb0",
     "url": "/reactive-weather/index.html"
   }
 ];
