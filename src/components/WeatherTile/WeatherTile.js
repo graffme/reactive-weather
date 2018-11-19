@@ -9,9 +9,9 @@ export default function WeatherTile(props) {
   "Thursday", "Friday", "Saturday"];
 
   const myDate = new Date();
-  var date = myDate.getDate();
-  var month = myDate.getMonth();
-  var day  = myDate.getDay();
+  const date = myDate.getDate();
+  const month = myDate.getMonth();
+  const day  = myDate.getDay();
 
   const forecastItems = props.forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
