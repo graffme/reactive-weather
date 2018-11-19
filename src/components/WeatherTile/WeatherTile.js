@@ -23,7 +23,7 @@ export default function WeatherTile(props) {
         : null}
 
         {dailyForecast.weather[0].id >= 300 && dailyForecast.weather[0].id < 600 ?
-          <i class="wi-rain"></i>
+          <i class="wi wi-rain"></i>
         : null}
 
         {dailyForecast.weather[0].id >= 600 && dailyForecast.weather[0].id < 700 ?
