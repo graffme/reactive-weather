@@ -2,7 +2,7 @@
   "name": "weather-forecast",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://graffme.github.io/reactive-weather",
+  "homepage": "https://graffme.github.io/reactive-weather",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "node-sass": "^4.10.0",
