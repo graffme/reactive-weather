@@ -42,8 +42,8 @@ export default function WeatherTile(props) {
           <i class="wi wi-cloud"></i>
         : null}
 
-        <p className="temp">{dailyForecast.temp.day} °C</p>
-        <p className="temp temp-night">{dailyForecast.temp.night} °C</p>
+        <p className="temp">{(dailyForecast.temp.day).toFixed(0)} °C</p>
+        <p className="temp temp-night">{(dailyForecast.temp.night).toFixed(0)} °C</p>
       </div>
     </div>
   );
