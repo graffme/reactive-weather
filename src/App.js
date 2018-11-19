@@ -30,7 +30,7 @@ export default class App extends Component {
     return (
       <div className="container main-container">
         <h1>5-days weather forecast</h1>
-        <p>This is a simple wather app, using OpenWeatherMap API to display 5-days forecast.</p>
+        <p>This is a simple wather app, using OpenWeatherMap API to display 5-days forecast for Poznań, PL.</p>
         <WeatherTile forecast={this.state.weather} />
       </div>
     );
