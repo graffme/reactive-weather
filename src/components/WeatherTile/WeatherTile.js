@@ -1,19 +1,15 @@
 import React from 'react';
 import './style.scss';
+import {months, weekdays} from './dates-variables.js';
 
-export default function WeatherTile(props) {
-  const months = ["Jan", "Feb", "Mar",
-  "Apr", "May", "June", "July", "Aug", "Sept",
-  "Oct", "Nov", "Dec"];
-  const weekdays = ["Sunday","Monday", "Tuesday", "Wednesday",
-  "Thursday", "Friday", "Saturday"];
+export default function WeatherTile({forecast}) {
 
   const myDate = new Date();
   const date = myDate.getDate();
   const month = myDate.getMonth();
   const day  = myDate.getDay();
 
-  const forecastItems = props.forecast.map((dailyForecast, index) =>
+  const forecastItems = forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
       <div className="weather-tile">
         <p className="weather-date">{weekdays[day+index] + " " + (date+index) + " " + months[month]}</p>
