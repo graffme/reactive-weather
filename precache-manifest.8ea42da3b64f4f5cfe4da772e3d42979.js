@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/reactive-weather/static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
-    "url": "/reactive-weather/static/media/weathericons-regular-webfont.4618f0de.ttf"
-  },
-  {
     "revision": "4b658767da6bd92ce2addb3ce512784d",
     "url": "/reactive-weather/static/media/weathericons-regular-webfont.4b658767.eot"
+  },
+  {
+    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
+    "url": "/reactive-weather/static/media/weathericons-regular-webfont.4618f0de.ttf"
   },
   {
     "revision": "2a8ff720bf17c8d39978",
