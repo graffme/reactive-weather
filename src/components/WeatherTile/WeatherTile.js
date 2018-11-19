@@ -16,7 +16,7 @@ export default function WeatherTile(props) {
   const forecastItems = props.forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
       <div className="weather-tile">
-        <p className="weather-date">{weekdays[day+index] + " " + date + " " + months[month]}</p>
+        <p className="weather-date">{weekdays[day+index] + " " + (date+index) + " " + months[month]}</p>
 
         {dailyForecast.weather[0].id >= 200 && dailyForecast.weather[0].id < 300 ?
           <i class="wi-storm-showers"></i>
