@@ -1,0 +1,15 @@
+@import 'assets/css/weather-icons.min.css';
+@import 'styles/variables.scss';
+
+body {
+  background-color: #ecf0f1;
+  color: $textColor;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+.main-container {
+  padding-top: 50px;
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "dt":1406106000,
+    "main": {
+      "temp_min": -4.00,
+      "temp_max": 0.00
+    },
+    "weather": [{
+      "main": "Clouds"
+      }]
+  },
+  {
+    "dt":1406106000,
+    "main": {
+      "temp_min": -4.00,
+      "temp_max": 0.00
+    },
+    "weather": [{
+      "main": "Clouds"
+      }]
+  },
+  {
+    "dt":1406106000,
+    "main": {
+      "temp_min": -4.00,
+      "temp_max": 0.00
+    },
+    "weather": [{
+      "main": "Clouds"
+      }]
+  },
+  {
+    "dt":1406106000,
+    "main": {
+      "temp_min": -4.00,
+      "temp_max": 0.00
+    },
+    "weather": [{
+      "main": "Clouds"
+      }]
+  },
+  {
+    "dt":1406106000,
+    "main": {
+      "temp_min": -4.00,
+      "temp_max": 0.00
+    },
+    "weather": [{
+      "main": "Clouds"
+      }]
+  }
+]
