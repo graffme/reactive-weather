@@ -16,9 +16,8 @@ export const locateUser = () => {
       addressLookup: true
     };
 
-    geolocator.locate(options, function (reject, resolve) {
-      console.log(resolve)
-      return resolve;
+    geolocator.locate(options, function (err, location) {
+      return resolve(location);
     });
   });
 }
