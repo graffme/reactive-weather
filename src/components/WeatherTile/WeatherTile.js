@@ -1,8 +1,22 @@
 import React from 'react';
 import './style.scss';
 import {months, weekdays} from './dates-variables.js';
+import {locateUser} from '../../config/geolocation.js';
 
 export default function WeatherTile({forecast}) {
+
+  async function geoLocation() {
+    console.log('working 1');
+    const data = await locateUser();
+    return data;
+  }
+
+  geoLocation().then( data => {
+    console.log('working 2');
+    console.log(data);
+  }).catch( err => {
+    console.log(err);
+  });
 
   const myDate = new Date();
   const date = myDate.getDate();
