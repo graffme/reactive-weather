@@ -9,35 +9,30 @@ export default function WeatherTile({forecast}) {
   const month = myDate.getMonth();
   const day  = myDate.getDay();
 
+  const getIconClass = (id) => {
+    switch(true) {
+      case (id >= 200 && id < 300):
+        return "wi-storm-showers";
+      case (id >= 300 && id < 600):
+        return "wi-rain";
+      case (id >= 600 && id < 700):
+        return "wi-snow";
+      case (id >= 700 && id < 800):
+        return "wi-fog";
+      case (id === 800):
+        return "wi-day-sunny";
+      case (id > 800):
+        return "wi-cloud";
+      default:
+        return "";
+    }
+  }
+
   const forecastItems = forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
       <div className="weather-tile">
         <p className="weather-date">{weekdays[day+index] + " " + (date+index) + " " + months[month]}</p>
-
-        {dailyForecast.weather[0].id >= 200 && dailyForecast.weather[0].id < 300 ?
-          <i className="wi-storm-showers"></i>
-        : null}
-
-        {dailyForecast.weather[0].id >= 300 && dailyForecast.weather[0].id < 600 ?
-          <i className="wi wi-rain"></i>
-        : null}
-
-        {dailyForecast.weather[0].id >= 600 && dailyForecast.weather[0].id < 700 ?
-          <i className="wi wi-snow"></i>
-        : null}
-
-        {dailyForecast.weather[0].id >= 700 && dailyForecast.weather[0].id < 800 ?
-          <i className="wi wi-fog"></i>
-        : null}
-
-        {dailyForecast.weather[0].id === 800 ?
-          <i className="wi wi-day-sunny"></i>
-        : null}
-
-        {dailyForecast.weather[0].id > 800 ?
-          <i className="wi wi-cloud"></i>
-        : null}
-
+        <i className={`wi ${getIconClass(dailyForecast.weather[0].id)}`}></i>
         <p className="temp">{(dailyForecast.temp.day).toFixed(0)} °C</p>
         <p className="temp temp-night">{(dailyForecast.temp.night).toFixed(0)} °C</p>
       </div>
