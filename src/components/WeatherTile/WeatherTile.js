@@ -2,18 +2,10 @@ import React from 'react';
 import './style.scss';
 import {months, weekdays} from './dates-variables.js';
 import {calcDay, getIconClass} from './helpers.js';
-import {locateUser} from '../../config/geolocation.js';
 
 export default function WeatherTile({forecast}) {
 
   const today = new Date();
-
-  locateUser().then( data => {
-      console.log(data);
-      return data;
-    }).catch( err => {
-      console.log(err);
-    });
 
   const forecastItems = forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
