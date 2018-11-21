@@ -1,14 +1,12 @@
 import React from 'react';
 import './style.scss';
 import {months, weekdays} from './dates-variables.js';
+import {calcDay, getIconClass} from './helpers.js';
 import {locateUser} from '../../config/geolocation.js';
 
 export default function WeatherTile({forecast}) {
 
-  const myDate = new Date();
-  const date = myDate.getDate();
-  const month = myDate.getMonth();
-  const day  = myDate.getDay();
+  const today = new Date();
 
   locateUser().then( data => {
       console.log(data);
@@ -17,29 +15,11 @@ export default function WeatherTile({forecast}) {
       console.log(err);
     });
 
-  const getIconClass = (id) => {
-    switch(true) {
-      case (id >= 200 && id < 300):
-        return "wi-storm-showers";
-      case (id >= 300 && id < 600):
-        return "wi-rain";
-      case (id >= 600 && id < 700):
-        return "wi-snow";
-      case (id >= 700 && id < 800):
-        return "wi-fog";
-      case (id === 800):
-        return "wi-day-sunny";
-      case (id > 800):
-        return "wi-cloud";
-      default:
-        return "";
-    }
-  }
-
   const forecastItems = forecast.map((dailyForecast, index) =>
     <div className="col text-center" key={index}>
       <div className="weather-tile">
-        <p className="weather-date">{weekdays[day+index] + " " + (date+index) + " " + months[month]}</p>
+
+        <p className="weather-date">{calcDay(today, index, weekdays, months)}</p>
         <i className={`wi ${getIconClass(dailyForecast.weather[0].id)}`}></i>
         <p className="temp">{(dailyForecast.temp.day).toFixed(0)} °C</p>
         <p className="temp temp-night">{(dailyForecast.temp.night).toFixed(0)} °C</p>
